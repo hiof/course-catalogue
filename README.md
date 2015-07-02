@@ -2,7 +2,7 @@
 
 ## About
 
-A plugin with the required files for the Cover content functionality.
+A plugin with the required files for the course catalogue.
 
 ## Copyright
 
