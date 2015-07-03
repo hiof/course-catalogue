@@ -14,7 +14,7 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    'build/cover-content.css': 'app/assets/sass/cover-content.scss'
+                    'build/course-catalogue.css': 'app/assets/sass/course-catalogue.scss'
                 }
             }
         },
