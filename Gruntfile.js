@@ -103,7 +103,7 @@ module.exports = function(grunt) {
             scripts: {
                 src: [
                     //'build/templates.js',
-                    'app/assets/js/cover-content.js'
+                    'app/assets/js/<%= pkg.name %>.js'
                 ],
                 dest: 'build/<%= pkg.name %>.v<%= pkg.version %>.min.js'
             }
