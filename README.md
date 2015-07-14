@@ -44,8 +44,11 @@ $ bower install
 
 ## Releases
 
+- [x] v1.0.0
+  - [x] Initial course-catalogue implementation as a plugin (see the frontend project for previous history)
+
 [Github releases](https://github.com/hiof/course-catalogue/releases)
 
 ### Roadmap
 
-v1.0.0 - Initial course-catalogue
+
