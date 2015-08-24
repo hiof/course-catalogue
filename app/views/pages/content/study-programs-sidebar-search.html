@@ -1,0 +1,356 @@
+<div id="study-filter" class="">
+
+
+
+
+  <form action="/nor/hogskolen-i-ostfold/studiekatalog-_-rekrutteringssider/studietilbudet/?" id="studie" name="studie" method="GET" class="catalogForm lo-full">
+    <header class="lo-full">
+    <h2 class="float-left">Filtrer</h2><a href="?filterDepartment=searchcontent" id="study-search-reset" class="btn btn-primary float-right">Nullstill filter</a></header>
+    <div id="freetext" class="lo-full padding-l-off padding-r-off">
+      <div class="input-group">
+        <!--<label for="searchcontent" class="studieinfoSearchBold">Fritekstsøk</label>-->
+        <input placeholder="Fritekstsøk" type="text" name="searchcontent" id="searchcontent" class=" form-control">
+        <span class="input-group-btn">
+                    <button class="btn btn-primary" type="button">Søk</button>
+                </span>
+      </div>
+    </div>
+    <h3>Velg type studier</h3>
+
+    <div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="typeStudy" value="sttype_all"> Alle typer
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="typeStudy" value="sttype_YU"> 4-årig lærerutdanning
+        </label>
+      </div>
+
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="typeStudy" value="sttype_bachelor"> Bachelorprogram
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="typeStudy" value="sttype_AR"> Årsstudier
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="typeStudy" value="sttype_lavere"> Lavere grads studier
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="typeStudy" value="sttype_master"> Masterprogram
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="typeStudy" value="sttype_master5"> Studier på masternivå
+        </label>
+      </div>
+    </div>
+    <h3>Velg fagområder</h3>
+
+    <div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="fagomraader" value="kat_all"> Alle fagområder
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="fagomraader" value="kat_70"> Forkurs og realfagskurs
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="fagomraader" value="kat_71"> Helse- og sosialfaglige utdanninger
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="fagomraader" value="kat_72"> Ingeniørutdanninger
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="fagomraader" value="kat_73"> IT-utdanninger
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="fagomraader" value="kat_74"> Lærer- og pedagogiske utdanninger
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="fagomraader" value="kat_75"> Samfunnsfag- og språkfagutdanninger
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="fagomraader" value="kat_76"> Økonomi, administrasjon og ledelsesutdanninger
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="fagomraader" value="kat_77"> Scenekunstutdanninger
+        </label>
+      </div>
+
+
+    </div>
+
+
+    <h3>Velg øvrige studier/alternativer</h3>
+
+
+    <div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="OvrigeStudierAlternativer" value="kat_79"> Etter- og videreutdanning
+        </label>
+      </div>
+
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="OvrigeStudierAlternativer" value="kat_80"> Nettbasert
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="OvrigeStudierAlternativer" value="kat_82"> Samlingsbasert
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="OvrigeStudierAlternativer" value="kat_81"> Deltid
+        </label>
+      </div>
+
+    </div>
+
+
+
+    <h3>Velg studiested</h3>
+
+    <div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="studiested" value="camp_all"> Alle studiesteder
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="studiested" value="camp_2"> Studiested Halden
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="studiested" value="camp_1"> Studiested Fredrikstad
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="studiested" value="camp_8"> Andre studiesteder
+        </label>
+      </div>
+      <div>
+        <input type="hidden" name="studie_formsubmitcheck" id="studie_formsubmitcheck" value="1">
+      </div>
+    </div>
+    <!--
+
+        <div class="lo-full padding-l-off padding-r-off btn-group">
+            <button type="button" class="btn btn-primary min-width-240" data-toggle="dropdown">Typer studier</button>
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                <span class="caret"></span>
+                <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Alle typer</a></li>
+                <li><a href="#">4-årig lærerutdanning</a></li>
+                <li><a href="#">Bachelorprogram</a></li>
+                <li><a href="#">Årsstudier</a></li>
+                <li><a href="#">Lavere grads studier</a></li>
+                <li><a href="#">Masterprogram</a></li>
+                <li><a href="#">Studier på masternivå</a></li>
+            </ul>
+        </div>
+        <div class="lo-full padding-l-off padding-r-off btn-group">
+            <button type="button" class="btn btn-primary min-width-240" data-toggle="dropdown">Øvrige studier/alternativer</button>
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                <span class="caret"></span>
+                <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Etter- og videreutdanning</a></li>
+                <li><a href="#">Nett- og /eller samlingsbasert</a></li>
+                <li><a href="#">Deltid</a></li>
+            </ul>
+        </div>
+        <div class="lo-full padding-l-off padding-r-off btn-group">
+            <button type="button" class="btn btn-primary min-width-240" data-toggle="dropdown">Fagområder</button>
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                <span class="caret"></span>
+                <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Alle fagområder</a></li>
+                <li><a href="#">Forkurs og realfagskurs</a></li>
+                <li><a href="#">Helse- og sosialfaglige utdanninger</a></li>
+                <li><a href="#">Ingeniørutdanninger</a></li>
+                <li><a href="#">IT-utdanninger</a></li>
+                <li><a href="#">Lærer- og pedagogiske utdanninger</a></li>
+                <li><a href="#">Samfunnsfag- og språkfagutdanninger</a></li>
+                <li><a href="#">Økonomi, administrasjon og ledelsesutdanninger</a></li>
+                <li><a href="#">Scenekunstutdanninger</a></li>
+            </ul>
+        </div>
+        <div class="lo-full padding-l-off padding-r-off btn-group">
+            <button type="button" class="btn btn-primary min-width-240" data-toggle="dropdown">Studiested</button>
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                <span class="caret"></span>
+                <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Alle studiesteder</a></li>
+                <li><a href="#">Studiested Halden</a></li>
+                <li><a href="#">Studiested Fredrikstad</a></li>
+                <li><a href="#">Andre studiesteder</a></li>
+            </ul>
+        </div>
+        -->
+  </form>
+</div>
+
+
+
+
+
+<!--
+                <div id="studtype" class="lo-full">
+            <div class="studieinfoSearchBold studieinfoSearchHeader">
+                <h3>Typer studier</h3>
+            </div>
+            <div class="radio studieinfoSearchBold">
+                <label class="sttype" for="sttype_all">
+                    <input class="studieinfoAllSelector" type="radio" value="sttype_all" id="sttype_all" checked="">Alle typer studier</label>
+            </div>
+            <div class="radio">
+                <label class="sttype" for="sttype_firearrig">
+                    <input class="studieinfoSingleSelector" type="radio" value="sttype_firearrig" id="sttype_firearrig" style="margin-right:8px;">4-årig lærerutdanning</label>
+            </div>
+            <div class="radio">
+                <label class="sttype" for="sttype_bachelor">
+                    <input class="studieinfoSingleSelector" type="radio" value="sttype_bachelor" id="sttype_bachelor">Bachelorprogram</label>
+            </div>
+            <div class="radio">
+                <label class="sttype" for="sttype_AR">
+                    <input class="studieinfoSingleSelector" type="radio" value="sttype_AR" id="sttype_AR">Årsstudier</label>
+            </div>
+            <div class="radio">
+                <label class="sttype" for="sttype_lavere">
+                    <input class="studieinfoSingleSelector" type="radio" value="sttype_lavere" id="sttype_lavere">Lavere grads studier</label>
+            </div>
+            <div class="radio">
+                <label class="sttype" for="sttype_master">
+                    <input class="studieinfoSingleSelector" type="radio" value="sttype_master" id="sttype_master">Masterprogram</label>
+            </div>
+            <div class="radio">
+                <label class="sttype" for="sttype_master5">
+                    <input class="studieinfoSingleSelector" type="radio" value="sttype_master5" id="sttype_master5">Studier på masternivå</label>
+            </div>
+            <div class="studieinfoSearchBold studieinfoSearchHeader">
+                <h3>Øvrige studier/alternativer</h3>
+            </div>
+            <div class="radio">
+                <label class="sttype" for="ovrig_79">
+                    <input id="ovrig_79" class="studieinfoSingleSelector" type="radio" value="ovrig_79">Etter- og videreutdanning</label>
+            </div>
+            <div class="radio">
+                <label class="sttype" for="ovrig_80">
+                    <input id="ovrig_80" class="studieinfoSingleSelector" type="radio" value="ovrig_80">Nett- og /eller samlingsbasert</label>
+            </div>
+            <div class="radio">
+                <label class="sttype" for="ovrig_81">
+                    <input id="ovrig_81" class="studieinfoSingleSelector" type="radio" value="ovrig_81">Deltid</label>
+            </div>
+
+
+        </div>
+        <div id="stprogDiv" class="lo-full">
+
+            <div class="studieinfoSearchBold studieinfoSearchHeader">
+                <h3>Fagområder</h3>
+            </div>
+            <div class="radio studieinfoSearchBold">
+                <label class="kat" for="kat_all">
+                    <input class="studieinfoAllSelector" type="radio" value="kat_all" id="kat_all" checked="">Alle fagområder</label>
+            </div>
+            <div class="radio">
+                <label class="kat" for="kat_70">
+                    <input class="studieinfoSingleSelector" type="radio" id="kat_70" value="kat_70">Forkurs og realfagskurs</label>
+            </div>
+            <div class="radio">
+                <label class="kat" for="kat_71">
+                    <input class="studieinfoSingleSelector" type="radio" id="kat_71" value="kat_71">Helse- og sosialfaglige utdanninger</label>
+            </div>
+            <div class="radio">
+                <label class="kat" for="kat_72">
+                    <input class="studieinfoSingleSelector" type="radio" id="kat_72" value="kat_72">Ingeniørutdanninger</label>
+            </div>
+            <div class="radio">
+                <label class="kat" for="kat_73">
+                    <input class="studieinfoSingleSelector" type="radio" id="kat_73" value="kat_73">IT-utdanninger</label>
+            </div>
+            <div class="radio">
+                <label class="kat" for="kat_74">
+                    <input class="studieinfoSingleSelector" type="radio" id="kat_74" value="kat_74">Lærer- og pedagogiske utdanninger</label>
+            </div>
+            <div class="radio">
+                <label class="kat" for="kat_75">
+                    <input class="studieinfoSingleSelector" type="radio" id="kat_75" value="kat_75">Samfunnsfag- og språkfagutdanninger</label>
+            </div>
+            <div class="radio">
+                <label class="kat" for="kat_76">
+                    <input class="studieinfoSingleSelector" type="radio" id="kat_76" value="kat_76">Økonomi, administrasjon og ledelsesutdanninger</label>
+            </div>
+            <div class="radio">
+                <label class="kat" for="kat_77">
+                    <input class="studieinfoSingleSelector" type="radio" id="kat_77" value="kat_77">Scenekunstutdanninger</label>
+            </div>
+
+        </div>
+
+        <div id="campus" class="lo-full">
+            <div class="studieinfoSearchBold studieinfoSearchHeader">
+                <h3>Alle studiesteder</h3>
+            </div>
+            <div class="radio studieinfoSearchBold">
+                <label class="camp" for="camp_all">
+                    <input class="studieinfoAllSelector" type="radio" value="camp_all" id="camp_all" checked="">Alle studiesteder</label>
+            </div>
+            <div class="radio">
+                <label for="camp_2" class="sttype">
+                    <input type="radio" value="camp_2" class="studieinfoSingleSelector" id="camp_2">Studiested Halden</label>
+            </div>
+            <div class="radio">
+                <label for="camp_1" class="sttype">
+                    <input type="radio" value="camp_1" class="studieinfoSingleSelector" id="camp_1">Studiested Fredrikstad</label>
+            </div>
+            <div class="radio">
+                <label for="camp_8" class="sttype">
+                    <input type="radio" value="camp_8" class="studieinfoSingleSelector" id="camp_8">Andre studiesteder</label>
+            </div>
+        </div>
+        <div id="study-alternativly" class="lo-full">
+
+        </div>
+-->

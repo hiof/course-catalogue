@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie11 lt-ie10 lt-ie9 lt-ie8 lt-ie7 lang-nb" lang="nb"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie11 lt-ie10 lt-ie9 lt-ie8 lang-nb" lang="nb"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie11 lt-ie10 lt-ie9 lang-nb" lang="nb"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js lt-ie11 lt-ie10 lang-nb" lang="nb"> <![endif]-->
+<!--[if IE 10]>    <html class="no-js lt-ie11 lang-nb" lang="nb"> <![endif]-->
+<!--[if gt IE 10]><!--> <html class="no-js lang-nb" lang="nb"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Høgskolen i Østfold</title>
+  <meta name="Author" content="">
+  <meta name="KeyWords" content="">
+  <meta name="Description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="" id="app-css" type="text/css">
+
+  <link rel="icon" type="image/png" href="assets/images/app-icons/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/images/app-icons/Icon-60.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/images/app-icons/Icon-72.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/images/app-icons/Icon-60@2.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/images/app-icons/Icon-76@2.png">
+
+  
+  <script type="text/javascript" src="vendor/jquery/dist/jquery.js"></script>
+  <!--
+  <script type="text/javascript" src="vendor/modernizr/modernizr.js"></script>-->
+
+
+  <script type="text/javascript" id="app-js"></script>
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    // Check if custom font is enabled in the view
+    if (customFont === false) {
+      //console.log("Custom font is false, adding standard stylesheet");
+      $.getJSON("config/assets.config.json", function(data) {
+        var assets = data.hiof.assets,
+          prefix = "assets",
+          cssPath = prefix + assets.css[0],
+          jsPath = prefix + assets.js[0];
+        $("#app-css").attr("href", cssPath);
+        $("#app-js").attr("src", jsPath);
+      });
+    } else {
+      //console.log("Custom font is true, adding custom stylesheet");
+    }
+  });
+  var customFont = false;
+  </script>
+
+
+</head>
+<body id="body">

@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+	- "0.12"
+	- "0.11"
+	- "0.10"
+	- "iojs"
+git:
+	submodules: false
+before_install: npm install -g grunt-cli
+before_script: bower install
+notifications:
+	slack:
+		secure: 1ea7hB8sM+yinn4I5Yr3xprSNJWo+7mXrqHvUjMoJ+IN+q6Mr6Lq7aQO69FV+Gt/BGRrVAFlL7LsSz00WOTxjO+51vth0hhvPoIa+vICZ88PxbMMgoZ+EtwC10RRSacMpFj3NGCEQQl00fV1SLAlL+/jX5pth1H7V+SbggrtgPQ=
