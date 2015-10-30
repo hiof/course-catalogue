@@ -100,6 +100,19 @@ module.exports = function(grunt) {
         //    }
         //},
         concat: {
+            pages: {
+                files: {
+                    'build/studier-index.html': [
+                        'app/views/partials/_head.html',
+                        'app/views/partials/_header.html',
+                        'app/views/pages/content/study-programs.html',
+                        'app/views/pages/content/study-programs-sidebar-start.html',
+                        'app/views/pages/content/study-programs-sidebar-search.html',
+                        'app/views/pages/content/study-programs-sidebar-end.html',
+                        'app/views/partials/_footer.html'
+                    ]
+                }
+            },
             scripts: {
                 src: [
                     //'build/templates.js',
@@ -213,6 +226,32 @@ module.exports = function(grunt) {
                     directoryPermissions: parseInt(755, 8)
                 }
             }
+        },
+        express: {
+            all: {
+                options: {
+                    port: 9000,
+                    hostname: "0.0.0.0",
+                    bases: 'build',
+                    livereload: true
+                }
+            }
+        },
+
+        open: {
+            all: {
+                path: 'http://localhost:<%= express.all.options.port%>'
+            }
+        },
+
+        qunit: {
+            all: {
+                options: {
+                    urls: [
+                        'http://localhost:9000/tests/qunit/study-catalog/study-catalog.html'
+                    ]
+                }
+            }
         }
         //watch: {
         //  hbs: {
@@ -245,5 +284,9 @@ module.exports = function(grunt) {
 
     grunt.registerTask('deploy-stage', ['deploy', 'sftp:stage']);
     grunt.registerTask('deploy-prod', ['deploy', 'sftp:prod']);
-
+    grunt.registerTask('test', [
+        'build',
+        'express',
+        'qunit'
+    ]);
 };
