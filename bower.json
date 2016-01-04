@@ -5,15 +5,24 @@
     "Kenneth Dahlstrøm <kenneth.dahlstrom@hiof.no>"
   ],
   "description": "course-catalogue plugin",
-  "license": "GNU",
+  "license": "GPL-3.0",
   "dependencies": {
-    "bootstrap": "~3.3.5",
+    "sass-mq": "~3.2.2",
+    "bootstrap": "~3.3.6",
     "jquery.scrollTo": "~1.4.11",
     "handlebars": "~2.0.0",
     "pathjs": "https://github.com/mtrpcic/pathjs.git",
     "frontend": "https://github.com/hiof/frontend.git#feature/extract-code-to-plugins",
     "jQuery-ajaxTransport-XDomainRequest": "https://github.com/MoonScript/jQuery-ajaxTransport-XDomainRequest.git",
-    "detectjs": "https://github.com/darcyclarke/Detect.js.git",
-    "sass-mq": "~3.2.2"
-  }
+    "detectjs": "https://github.com/darcyclarke/Detect.js.git"
+  },
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor",
+    "test",
+    "tests"
+  ]
 }
