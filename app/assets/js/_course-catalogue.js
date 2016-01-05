@@ -132,13 +132,14 @@ class CourseCatalogue {
 
 
   filterData() {
-    var thisFilter = $('form').serialize(),
+    let thisFilter = $('form').serialize(),
     //thisValue = $(element).attr('value'),
     filter = "",
     totalCheckboxtypeStudy = $('input[name=typeStudy]:checked').length - 1,
     totalCheckboxFagomraader = $('input[name=fagomraader]:checked').length - 1,
     totalCheckboxOvrigeStudierAlternativer = $('input[name=OvrigeStudierAlternativer]:checked').length - 1,
-    totalCheckboxStudiested = $('input[name=studiested]:checked').length - 1;
+    totalCheckboxStudiested = $('input[name=studiested]:checked').length - 1,
+    totalCheckboxOppstart = $('input[name=oppstart]:checked').length - 1;
 
 
     //debug(thisFilter);
@@ -253,6 +254,29 @@ class CourseCatalogue {
     if ($('input[name=studiested]').is(':checked')) {
       filter += "))";
     }
+
+    if ($('input[name=oppstart]').is(':checked')) {
+      filter += "(?=.*(";
+    }
+
+    $('input[name=oppstart]:checked').each(function(i, item) {
+      //console.log("Filter for oppstart");
+      if (this.checked) {
+        //console.log('Item is:' + i);
+        if (i === totalCheckboxOppstart) {
+          filter += $(this).val() + "";
+        } else {
+          filter += $(this).val() + "|";
+          //console.log($(this).val());
+        }
+
+      }
+    });
+    if ($('input[name=oppstart]').is(':checked')) {
+      filter += "))";
+    }
+
+    
     //
     //debug('Full filter: '+filter);
     //console.log("------------------------");
@@ -460,7 +484,7 @@ $(function() {
 
       // Adjust the size of embeded videoes in the study calague
       let allVideos = $("iframe[src^='https://player.vimeo.com'], iframe[src^='//www.youtube.com'], object, embed"),
-          fluidEl = $("#content");
+      fluidEl = $("#content");
 
       allVideos.each(function() {
         // jQuery .data does not work on object/embed elements
