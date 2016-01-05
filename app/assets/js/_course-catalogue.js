@@ -458,5 +458,21 @@ $(function() {
       //
       //});
 
+      // Adjust the size of embeded videoes in the study calague
+      let allVideos = $("iframe[src^='https://player.vimeo.com'], iframe[src^='//www.youtube.com'], object, embed"),
+          fluidEl = $("#content");
+
+      allVideos.each(function() {
+        // jQuery .data does not work on object/embed elements
+        $(this).attr('data-aspect-ratio', this.height / this.width).removeAttr('height').removeAttr('width');
+        console.log("Video adjusted...");
+      });
+      $(window).resize(function() {
+        var newWidth = fluidEl.width();
+        allVideos.each(function() {
+          let el = $(this);
+          el.width(newWidth).height(newWidth * el.attr('data-aspect-ratio'));
+        });
+      }).resize();
 
     });
