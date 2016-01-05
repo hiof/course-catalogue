@@ -465,7 +465,6 @@ $(function() {
       allVideos.each(function() {
         // jQuery .data does not work on object/embed elements
         $(this).attr('data-aspect-ratio', this.height / this.width).removeAttr('height').removeAttr('width');
-        console.log("Video adjusted...");
       });
       $(window).resize(function() {
         var newWidth = fluidEl.width();
