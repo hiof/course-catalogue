@@ -30,15 +30,15 @@ class CourseCatalogue {
     //console.log(studyCourseFacts);
 
     // Temporary change the apply-button text
-    var now = new Date().getTime(),
-    future = new Date('2016-02-01').getTime();
-    if (now < future) {
-      $(".btn-study-apply").each(function(index) {
-        if (($(this).text() == 'Søk her før 15. april! ') || ($(this).text() == 'Søk her før 1. mars! ') || ($(this).text() == 'Søk her før 1.mars! ')) {
-            $('.btn-study-apply').text('Søking åpner 1. februar');
-        }
-      });
-    }
+    //var now = new Date().getTime(),
+    //future = new Date('2016-02-01').getTime();
+    //if (now < future) {
+    //  $(".btn-study-apply").each(function(index) {
+    //    if (($(this).text() == 'Søk her før 15. april! ') || ($(this).text() == 'Søk her før 1. mars! ') || ($(this).text() == 'Søk her før 1.mars! ')) {
+    //        $('.btn-study-apply').text('Søking åpner 1. februar');
+    //    }
+    //  });
+    //}
     //console.log('duplicateStudyCourseFacts is called');
   }
 
