@@ -43,9 +43,8 @@ class CourseCatalogue {
   }
 
 
-
   executeFilterFromUrl(){
-    var searchTerm = Hiof.getUrlParameterByName("filterDepartment").toString();
+    var searchTerm = Hiof.view.getUrlParameterByName("filterDepartment").toString();
     //var multiFilter = Hiof.getUrlParameterByName("filter").toString();
     //var filter = '';
     //debug("Singlefilter: " + singleFilter);
