@@ -2,128 +2,6 @@
 @import '../../../vendor/frontend/app/assets/sass/variables/_standard.scss';
 
 
-#study {
-  //margin-top: -50rem;
-  background: #fff;
-  border-radius: .4rem;
-  padding: 2rem;
-  position: relative;
-  margin-bottom: 8rem;
-  padding-bottom: 6rem;
-  .lo-full {
-    margin-bottom: 0;
-  }
-  > header {
-    width: 100%;
-    float: left;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid #eee;
-  }
-  article {
-    h3 {
-      font-size: 1.6rem;
-      margin-bottom: 2rem;
-    }
-    p {
-      margin-bottom: 0;
-    }
-    img {
-      margin-top: 0;
-      margin-bottom: 2rem;
-    }
-  }
-  footer {
-    position: absolute;
-    bottom: 0;
-    background: $color-primary-action;
-    width: 100%;
-    margin-left: -2rem;
-    border-bottom-left-radius: .4rem;
-    border-bottom-right-radius: .4rem;
-    ul {
-      margin-bottom: 0;
-      margin-left: 1rem;
-    }
-    li {
-      list-style: none;
-      display: inline-block;
-      margin: 0;
-      //margin-right: 2rem;
-      position: relative;
-      a {
-        line-height: 4.4rem;
-        color: #fff;
-        display: block;
-        border-radius: 0;
-        &:hover {
-          background: lighten($color-primary-action, 10%);
-          //color: $color-primary-action
-          text-decoration: none;
-          &:after {
-            border-left-color: lighten($color-primary-action, 10%);
-          }
-        }
-      }
-      ul {
-        display: none;
-        position: absolute;
-        width: 40rem;
-        left: 0;
-        z-index: 999;
-        padding: 0;
-        top: 100%;
-        margin: 0;
-        border-top: .2rem solid darken($color-primary-action, 10%);
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
-        li {
-          display: block;
-          a {
-            background: $color-primary-action;
-            display: block;
-            padding: 0 2rem;
-            &:hover {
-              background: lighten($color-primary-action, 10%);
-            }
-          }
-          &:last-child {
-            a {
-              border-bottom-left-radius: .4rem;
-              border-bottom-right-radius: .4rem;
-            }
-          }
-        }
-      }
-      &:hover {
-        ul {
-          display: block;
-        }
-      }
-    }
-    .form-inline {
-      width: 200px;
-      margin-bottom: 0;
-      //margin-top: 8px;
-    }
-    .btn-link {
-      &:before, &:after {
-        top: 2.4rem;
-      }
-    }
-  }
-}
-
-.lang-en.index {
-  // Override to fix a spacing issue when the index hero-layout is combined
-  // with normal page content
-  #study {
-    padding-bottom: 0;
-  }
-  #content {
-    margin-top: 0;
-  }
-}
-
 // TODO: add icons to display functionality
 //#study-filter h3{
 //  padding-right: 3rem;
@@ -143,12 +21,14 @@
 //}
 #research,
 #news {
-  margin-bottom: 4rem;
+  padding-top: 1rem;
+  //border-top: .1rem solid rgba(50,50,50,.1);
+  margin-bottom: 1rem;
   > header {
     position: relative;
     width: 100%;
     float: left;
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
     //h2{
     //  padding-left: 1rem;
     //}
