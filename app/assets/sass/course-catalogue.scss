@@ -336,6 +336,7 @@
     //}
   }
   #study {
+    max-height: 35.5rem;
     .lo-one-third {
       width: 48%;
       float: left;
@@ -348,6 +349,9 @@
 }
 
 @include mq($from: large) {
+  #study{
+    max-height: 35.5rem;
+  }
   //.cover {
   //    #study {
   //        margin-top: -50rem;
