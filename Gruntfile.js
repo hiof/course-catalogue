@@ -298,7 +298,7 @@ grunt.registerTask('deploy', ['clean:build', 'clean:dist', 'subtaskJs', 'subtask
 
 
 
-grunt.registerTask('deploy-stage', ['deploy', 'sftp:stage']);
+grunt.registerTask('deploy-staging', ['deploy', 'sftp:stage']);
 grunt.registerTask('deploy-prod', ['deploy', 'sftp:prod']);
 grunt.registerTask('test', [
   'build',
