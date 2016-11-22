@@ -15,16 +15,18 @@ class CourseCatalogue {
     $('.btn-study-apply span').remove();
 
     var btnApplyClone = btnApply.clone(),
-    btnStudyModel = $(".study-plan-model-link").clone();
+    btnStudyModel = $(".study-plan-model-link").clone(),
+    btnAdmission = $(btnStudyModel).clone().attr('href', '/?ID=30782').text('Slik søker du opptak');
 
-    $(studyCourseFacts).addClass("study-course-facts");
+    $(studyCourseFacts).addClass("study-course-facts").removeClass('lo-half');
 
-
-    $(studyCourseFacts).insertAfter("#program-KS019");
+    $('#sidebar').prepend(studyCourseFacts);
+    //$(studyCourseFacts).insertAfter("#program-KS019");
     $(".study-course-facts h3").remove();
     $(".study-course-facts #knapp1").remove();
     $(".study-course-facts #toggleme").remove();
     $(".study-course-facts").append(btnStudyModel);
+    $(".study-course-facts").append(btnAdmission);
     $(".study-course-facts").append(btnApplyClone);
 
     //console.log(studyCourseFacts);
@@ -39,9 +41,32 @@ class CourseCatalogue {
         }
       });
     }
+    this.addInternalNav();
     //console.log('duplicateStudyCourseFacts is called');
   }
+  addInternalNav(){
+    //let headings = [];
+    $('#nav-page').addClass('lo-full').append('<ul class="nav nav-pills nav-stacked"></ul>');
+    $('#content > :header').each(function(index){
 
+      let hText = $.trim($(this).text());
+
+      //headings.push({"url": $(this).attr('id'), "title": hText, "el": $(this).prop('nodeName')});
+      if ($(this).prop('nodeName') === 'H3') {
+        $('#nav-page ul').append('<li><a href="#' + $(this).attr('id') + '">'+ hText + '</a></li>');
+      }
+      //console.log(this);
+    });
+    //console.log(headings);
+
+    //$('#content').prepend('<div class></div>')
+
+    //$("#nav-page").detach().prependTo('#content');
+
+
+
+
+  }
 
   executeFilterFromUrl(){
     var searchTerm = Hiof.view.getUrlParameterByName("filterDepartment").toString();

@@ -91,7 +91,8 @@
 }
 
 .study-course-facts {
-  .study-plan-model-link {
+  .study-plan-model-link,
+  .btn-study-apply{
     width: 90%;
     margin-bottom: 2rem;
   }
@@ -351,9 +352,4 @@
   #study{
     max-height: 35.5rem;
   }
-  //.cover {
-  //    #study {
-  //        margin-top: -50rem;
-  //    }
-  //}
 }
