@@ -541,6 +541,8 @@ class CourseCatalogue {
         $('#sidebar').append(newShortInfo);
       }
 
+      $('#study-course-catalogue th:nth-of-type(2)').trigger("click");
+
       //$(document).on('click', '.semester-start-details-item', function(e) {
       //    e.preventDefault();
       //    $(this).toggleClass("open");
