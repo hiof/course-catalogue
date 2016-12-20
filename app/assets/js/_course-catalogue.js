@@ -522,17 +522,18 @@ class CourseCatalogue {
         $('#toggleme').slideToggle();
       });
 
-
-      $(document).on('click', '#nav-page li a', function(e) {
-        e.preventDefault();
-        let destination = $(this).attr('href');
-        $.scrollTo($(destination), 150, {
-          axis: 'y',
-          offset: {
-            top: -120
-          }
+      if ($('#main[data-page-category="study"]').length) {
+        $(document).on('click', '#nav-page li a', function(e) {
+          e.preventDefault();
+          let destination = $(this).attr('href');
+          $.scrollTo($(destination), 150, {
+            axis: 'y',
+            offset: {
+              top: -120
+            }
+          });
         });
-      });
+      }
 
 
       //$(document).on('click', '.semester-start-details-item', function(e) {
