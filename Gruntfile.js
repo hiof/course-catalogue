@@ -18,18 +18,13 @@ module.exports = function(grunt) {
         }
       }
     },
-
-
     autoprefixer: {
       options: {
         browsers: ['last 2 versions', 'ie 8', 'ie 9']
-        //diff: 'build/config/*.diff'
       },
       prefix: {
         expand: true,
-        //flatten: true,
         src: 'build/*.css'
-        //dest: 'tmp/css/prefixed/'
       }
     },
     cssmin: {
@@ -84,30 +79,14 @@ module.exports = function(grunt) {
     },
     eslint: {
       options: {
-        //format: require('babel-eslint'),
         quiet: true
-        //rulePath: ['node_modules/eslint-rules-es2015/lib/index.js']
       },
       target: ['app/assets/js/**/*.js']
     },
 
-    //handlebars: {
-    //    options: {
-    //        namespace: 'Hiof.Templates',
-    //        processName: function(filePath) {
-    //            return filePath.replace(/^app\/templates\//, '').replace(/\.hbs$/, '');
-    //        }
-    //    },
-    //    all: {
-    //        files: {
-    //            "build/templates.js": ["app/templates/**/*.hbs"]
-    //        }
-    //    }
-    //},
     babel: {
       options: {
         sourceMap: true
-        //presets: ['es2015']
       },
       dist: {
         files: {
@@ -131,7 +110,6 @@ module.exports = function(grunt) {
       },
       scripts: {
         src: [
-          //'build/templates.js',
           'build/_<%= pkg.name %>.js'
         ],
         dest: 'build/<%= pkg.name %>.v<%= pkg.version %>.min.js'
@@ -218,8 +196,6 @@ module.exports = function(grunt) {
         host: '<%= secret.stage.host %>',
         username: '<%= secret.stage.username %>',
         password: '<%= secret.stage.password %>',
-        //privateKey: grunt.file.read('id_rsa'),
-        //passphrase: '<%= secret.passphrase %>',
         showProgress: true,
         createDirectories: true,
         directoryPermissions: parseInt(755, 8)
@@ -235,8 +211,6 @@ module.exports = function(grunt) {
         host: '<%= secret.prod.host %>',
         username: '<%= secret.prod.username %>',
         password: '<%= secret.prod.password %>',
-        //privateKey: grunt.file.read('id_rsa'),
-        //passphrase: '<%= secret.passphrase %>',
         showProgress: true,
         createDirectories: true,
         directoryPermissions: parseInt(755, 8)
@@ -253,13 +227,11 @@ module.exports = function(grunt) {
       }
     }
   },
-
   open: {
     all: {
       path: 'http://localhost:<%= express.all.options.port%>'
     }
   },
-
   qunit: {
     all: {
       options: {
@@ -268,24 +240,16 @@ module.exports = function(grunt) {
         ]
       }
     }
-  }
-  //watch: {
-  //  hbs: {
-  //    files: ['app/templates/**/*.hbs'],
-  //    tasks: ['handlebars', 'copy:jstemplates'],
-  //    options: {
-  //      livereload: true,
-  //    },
-  //  },
-  //  js: {
-  //    files: ['app/assets/js/**/*.js', 'app/assets/js/**/*.json'],
-  //    tasks: ['jshint', 'concat:scripts', 'versioning:build'],
-  //    options: {
-  //      livereload: true,
-  //    },
-  //  },
-  //}
+  },
+  watch: {
+    all: {
+      files: ['app/assets/**/*'],
+      tasks: ['deploy-staging'],
+      options: {
 
+      },
+    }
+  },
 });
 
 grunt.registerTask('subtaskJs', ['eslint','babel',  'concat:scripts', 'uglify']);

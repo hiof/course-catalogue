@@ -70,6 +70,13 @@ $ bower install
 - [x] v1.0.0
   - [x] Initial course-catalogue implementation as a plugin (see the frontend project for previous history)
 
+
+- [x] v1.7.0
+  - [x] Fix button spacing in course catalogue
+  - [x] Fix line height in course list
+  - [x] Adjust dropdown arrow position
+  - ++
+
 [Github releases](https://github.com/hiof/course-catalogue/releases)
 
 ### Roadmap
