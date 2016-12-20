@@ -311,7 +311,9 @@
 .studieinfo_displayHeadlinesOnly {
   float: left;
 }
-
+.study-short-info-master-acs{
+  float: none;
+}
 @include mq($until: small) {
   [data-page-category="study"] {
     #nav-page{
