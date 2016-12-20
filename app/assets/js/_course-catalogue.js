@@ -62,7 +62,7 @@ class CourseCatalogue {
         let hText = $.trim($(this).text());
 
         //headings.push({"url": $(this).attr('id'), "title": hText, "el": $(this).prop('nodeName')});
-        if ($(this).prop('nodeName') === 'H3') {
+        if (($(this).prop('nodeName') === 'H2') || $(this).prop('nodeName') === 'H3') {
           if ($(this).attr('id') === 'program-KS602') {
 
             var btnApplyClone = that.btnApply.clone();
@@ -534,7 +534,12 @@ class CourseCatalogue {
           });
         });
       }
+      if ($('.study-short-info-master-acs').length) {
+        courseCatalogue.addInternalNav();
+        let newShortInfo = $('.study-short-info-master-acs').clone();
 
+        $('#sidebar').append(newShortInfo);
+      }
 
       //$(document).on('click', '.semester-start-details-item', function(e) {
       //    e.preventDefault();
