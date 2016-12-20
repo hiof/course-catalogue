@@ -19,6 +19,13 @@
 //
 //  }
 //}
+
+#main[data-page-category="study"]{
+  h1{
+    margin-bottom: 2rem;
+  }
+}
+
 #research,
 #news {
   padding-top: 1rem;
@@ -88,15 +95,22 @@
   border: 1px solid #ddd;
   border-radius: .4rem;
   margin: 2rem;
+  margin-right: 0;
 }
 
 .study-course-facts {
-  .study-plan-model-link {
+  .study-plan-model-link,
+  .btn-study-apply{
     width: 90%;
     margin-bottom: 2rem;
   }
 }
-
+#study-program-internal-nav{
+  .btn-study-apply{
+    margin-top: .4rem;
+    margin-right: .4rem;
+  }
+}
 // KD: Hack for the Study-model to look descent
 .study-model-wrapper {
   width: 100%;
@@ -110,6 +124,50 @@
 .studieinfoexplanationicons {
   img {
     margin-bottom: 0 !important;
+  }
+}
+.footable-toggle{
+  transform: translateY(.3rem);
+}
+.study-course-catalogue-moreinfo{
+  padding: .5rem 1rem;
+  .btn{
+    margin-top: -.5rem;
+    svg{
+      width: 1.4rem;
+      height: 1.4rem;
+      transition: transform .3s;
+      transform: translateY(.3rem);
+      path{
+        fill: $color-primary-action;
+      }
+    }
+    &:hover{
+      svg{
+
+        transform: translateY(.3rem) translateX(.3rem);
+      }
+      path{
+        fill: $white;
+      }
+    }
+  }
+}
+#main{
+  position: relative;
+}
+[data-page-category="study"] {
+  #cover{
+    margin-bottom: 6rem;
+  }
+  #nav-page{
+    position: absolute;
+    top:17rem;
+    left: 0;
+  }
+  #nav-page.navbar-fixed-top{
+    position: fixed;
+    top: 4.4rem;
   }
 }
 
@@ -239,14 +297,15 @@
 }
 
 #sidebar {
-  .min-width-240 {
-    min-width: 23rem;
-  }
-  .dropdown-menu {
-    li {
-      margin-left: 0;
-    }
-  }
+  padding-right: 0;
+  //.min-width-240 {
+  //  min-width: 23rem;
+  //}
+  //.dropdown-menu {
+  //  li {
+  //    margin-left: 0;
+  //  }
+  //}
 }
 
 .studieinfo_displayHeadlinesOnly {
@@ -254,6 +313,47 @@
 }
 
 @include mq($until: small) {
+  [data-page-category="study"] {
+    #nav-page{
+      top:12rem;
+    }
+  }
+  #study-program-internal-nav{
+    display: none;
+    position: relative;
+    height: 100%;
+    z-index: 1;
+    &> ul{
+      //overflow-x: scroll;
+      height: 4.4rem;
+      white-space: nowrap;
+      //overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      -ms-overflow-style: -ms-autohiding-scrollbar;
+      overflow-x: auto;
+      overflow-y: hidden;
+    }
+    li{
+      display: inline-block;
+      float: inherit;
+      width: auto;
+      opacity: 1;
+      transform: none;
+      animation: chapternav-slidein 350ms backwards;
+    }
+    .float-right{
+      position: absolute;
+      top: 0;
+      right: 0;
+      &:before{
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: pink;
+      }
+    }
+  }
   [data-page-category="study"] {
     .footable-first-column {
       font-size: 1.2rem;
@@ -266,6 +366,9 @@
     padding-left: 1rem !important;
     padding-right: 1rem !important;
     margin-bottom: 0;
+    footer{
+      display: none;
+    }
     .lo-one-third {
       width: 100%;
       //background: pink;
@@ -323,6 +426,9 @@
 @include mq($from: small, $until: large) {
   .cover {
     #study {
+      footer{
+        display: none;
+      }
       //margin-top: -50rem;
     }
     //[data-page-category='hero'] {}
@@ -351,9 +457,4 @@
   #study{
     max-height: 35.5rem;
   }
-  //.cover {
-  //    #study {
-  //        margin-top: -50rem;
-  //    }
-  //}
 }
