@@ -3,6 +3,7 @@ class CourseCatalogue {
     this.view = new View(),
     this.svgArrow = this.view.getSvgIcon("arrow-right");
     this.btnApply = $("#program-KS602").next().find("a").addClass('btn-study-apply');
+    this.movedFilter = false;
   }
   render(){
     this.duplicateStudyCourseFacts();
@@ -373,6 +374,24 @@ class CourseCatalogue {
       }
 
     }
+    toggleFilterOnSmallScreens(){
+      if (window.innerWidth <= 795) {
+
+        if (!this.movedFilter) {
+          this.movedFilter = true;
+          let sidebar = $('#study-filter').addClass('toggle-hidden').detach();
+          $('<button id="toggle-filter" class="btn btn-primary float-right" style="margin-left:1rem;">Vis filter</button>').insertBefore('#study-search-reset');
+          $(sidebar).appendTo( "#study-course-catalogue caption" );
+        }
+      }else{
+        if (this.movedFilter) {
+          this.movedFilter = false;
+          $('#toggle-filter').remove();
+          let sidebar = $('#study-filter').removeClass('toggle-hidden').detach();
+          $(sidebar).appendTo( "#sidebar" );
+        }
+      }
+    }
   }
 
   $(function() {
@@ -468,7 +487,10 @@ class CourseCatalogue {
       //  //filterData();
       //});
 
-
+      $('#content').on('click', '#toggle-filter', function(e){
+        e.preventDefault();
+        $('#study-filter').toggleClass('toggle-hidden');
+      });
 
 
       // Check if you are on the study page
@@ -563,6 +585,7 @@ class CourseCatalogue {
           let el = $(this);
           el.width(newWidth).height(newWidth * el.attr('data-aspect-ratio'));
         });
+        courseCatalogue.toggleFilterOnSmallScreens();
       }).resize();
 
 
