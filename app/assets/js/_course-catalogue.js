@@ -62,7 +62,7 @@ class CourseCatalogue {
         let hText = $.trim($(this).text());
 
         //headings.push({"url": $(this).attr('id'), "title": hText, "el": $(this).prop('nodeName')});
-        if (($(this).prop('nodeName') === 'H2') || $(this).prop('nodeName') === 'H3') {
+        if ($(this).prop('nodeName') === 'H3') {
           if ($(this).attr('id') === 'program-KS602') {
 
             var btnApplyClone = that.btnApply.clone();
