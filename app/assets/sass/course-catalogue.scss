@@ -384,46 +384,46 @@
   .study-course-facts {
     margin: inherit;
   }
-  #study-filter {
-    display: none;
-  }
-  #study-filter {
-    position: relative;
-    //margin-top:100px;
-    background: #eee;
-    float: left;
-    margin-bottom: 2rem;
-    padding-top: 2rem;
-    //width: 100%;
-    //margin-left: -20px;
-    //margin-right: -20px;
-    position: relative;
-    overflow: hidden;
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-    &:before {
-      content: "";
-      position: absolute;
-      z-index: 1;
-      width: 96%;
-      top: -10px;
-      height: 10px;
-      left: 2%;
-      border-radius: 100px / 5px;
-      box-shadow: 0 0 18px rgba(0, 0, 0, 0.6);
-    }
-    &:after {
-      content: "";
-      position: absolute;
-      z-index: 1;
-      width: 96%;
-      bottom: -10px;
-      height: 10px;
-      left: 2%;
-      border-radius: 100px / 5px;
-      box-shadow: 0 0 18px rgba(0, 0, 0, 0.6);
-    }
-  }
+  //#study-filter {
+  //  display: none;
+  //}
+  //#study-filter {
+  //  position: relative;
+  //  //margin-top:100px;
+  //  background: #eee;
+  //  float: left;
+  //  margin-bottom: 2rem;
+  //  padding-top: 2rem;
+  //  //width: 100%;
+  //  //margin-left: -20px;
+  //  //margin-right: -20px;
+  //  position: relative;
+  //  overflow: hidden;
+  //  border-top: 1px solid #ddd;
+  //  border-bottom: 1px solid #ddd;
+  //  &:before {
+  //    content: "";
+  //    position: absolute;
+  //    z-index: 1;
+  //    width: 96%;
+  //    top: -10px;
+  //    height: 10px;
+  //    left: 2%;
+  //    border-radius: 100px / 5px;
+  //    box-shadow: 0 0 18px rgba(0, 0, 0, 0.6);
+  //  }
+  //  &:after {
+  //    content: "";
+  //    position: absolute;
+  //    z-index: 1;
+  //    width: 96%;
+  //    bottom: -10px;
+  //    height: 10px;
+  //    left: 2%;
+  //    border-radius: 100px / 5px;
+  //    box-shadow: 0 0 18px rgba(0, 0, 0, 0.6);
+  //  }
+  //}
 }
 
 @include mq($from: small, $until: large) {
@@ -455,9 +455,26 @@
     }
   }
 }
-
 @include mq($from: large) {
   #study{
     max-height: 35.5rem;
+  }
+}
+
+@include mq($until: 795px){
+  #study-filter.toggle-hidden{
+    max-height: 0;
+    transition: max-height .3s ease, padding .3s ease;
+    overflow: hidden;
+    border: 0px;
+    padding: 0 1rem;
+  }
+  #study-filter{
+    max-height: 400rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 1px solid #eee;
+    border-radius: $border-radius-standard;
+    transition: max-height .3s ease, padding .3s ease;
   }
 }
