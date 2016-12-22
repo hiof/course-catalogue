@@ -320,6 +320,15 @@
 .study-short-info-master-acs{
   float: none;
 }
+#study-course-catalogue{
+  td:first-of-type{
+    span,a{
+      display: table-cell;
+    }
+  }
+}
+
+
 @include mq($until: small) {
   [data-page-category="study"] {
     #nav-page{
@@ -465,13 +474,7 @@
 }
 
 @include mq($until: 795px){
-  #study-course-catalogue{
-    td:first-of-type{
-      span,a{
-        display: table-cell;
-      }
-    }
-  }
+
   #study-filter.toggle-hidden{
     max-height: 0;
     transition: max-height .3s ease, padding .3s ease;
