@@ -25,7 +25,12 @@
     margin-bottom: 2rem;
   }
 }
-
+#study-course-catalogue{
+  a:not(.btn){
+    border-bottom-width: 2px;
+    border-bottom-color: rgba(255,255,255,0);
+  }
+}
 #research,
 #news {
   padding-top: 1rem;
@@ -432,7 +437,6 @@
       footer{
         display: none;
       }
-      //margin-top: -50rem;
     }
     //[data-page-category='hero'] {}
     //[data-page-category='hero'],
@@ -448,7 +452,6 @@
     .lo-one-third {
       width: 48%;
       float: left;
-      //background: pink;
       img {
         width: 100%;
       }
@@ -462,6 +465,13 @@
 }
 
 @include mq($until: 795px){
+  #study-course-catalogue{
+    td:first-of-type{
+      span,a{
+        display: table-cell;
+      }
+    }
+  }
   #study-filter.toggle-hidden{
     max-height: 0;
     transition: max-height .3s ease, padding .3s ease;
@@ -477,4 +487,8 @@
     border-radius: $border-radius-standard;
     transition: max-height .3s ease, padding .3s ease;
   }
+  #content.lo-auron-2-3{
+    width: 100%;
+  }
+
 }
